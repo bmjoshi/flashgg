@@ -1,1 +1,6 @@
 wh_anom/
+test.sh
+test.sub
+*.log
+*.out
+*.err
