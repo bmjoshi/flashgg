@@ -446,6 +446,7 @@ class JobConfig(object):
         if self.copyInputMicroAOD and not self.dryRun:
             commands.getstatusoutput('mkdir -p input_files/')
             for i,f in enumerate(flist):
+                print('{}'.format(f))
                 status, out = commands.getstatusoutput('xrdcp %s ./input_files/'%f)
                 print(out)
                 flocal = 'file:./input_files/'+f.split('/')[-1]
